@@ -20,7 +20,7 @@ export function InputForm({ input, handleChangeInput }) {
     <div className="container">
       <div className="drop">
         <div className="content">
-          <h2 className="headerText">Log in</h2>
+          <h2 className="headerText">User info</h2>
           <form onSubmit={handleSubmit} className="form">
             <div className="inputbox">
               <input
