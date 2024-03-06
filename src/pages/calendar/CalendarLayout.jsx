@@ -5,11 +5,20 @@ import { DateForm } from "../../components/InputForm/DateForm";
 import { useState } from "react";
 
 export function CalendarLayout(props) {
+  const phrases = [
+    "Я волшебная кнопка",
+    "Жмакни меня",
+    "Жми еще",
+    "Давай, давай",
+  ];
+
   const navigate = useNavigate();
   const [color, setColor] = useState(null);
-  const phrase = []
-  function handleColor() {
+  const [phrase, setPhrase] = useState(phrases[0]);
+
+  function handleClick() {
     setColor(getColor());
+    setPhrase(phrases[Math.floor(Math.random() * phrases.length)]);
   }
 
   function handleHome() {
@@ -24,8 +33,12 @@ export function CalendarLayout(props) {
         onClick={handleHome}
       />
       <DateForm {...props} />
-      <Button type="primary" onClick={handleColor} style={{ backgroundColor: color}}>
-        Волшебная кнопка
+      <Button
+        type="primary"
+        onClick={handleClick}
+        style={{ backgroundColor: color, color: "black" }}
+      >
+        {phrase}
       </Button>
     </>
   );

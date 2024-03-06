@@ -10,12 +10,12 @@ DateForm.propTypes = {
 export function DateForm({ input }) {
   const { year } = createDate();
   const [date, setDate] = useState(year);
- 
+
   function handleClickNextYear() {
-    setDate(date + 1)
+    setDate(date + 1);
   }
   function handleClickPrevioustYear() {
-    setDate(date - 1)
+    setDate(date - 1);
   }
   return (
     <div className="container">
@@ -27,13 +27,28 @@ export function DateForm({ input }) {
             {input.name} {input.lastName}
           </h1>
           <div className="content__date-control">
-            <button className="date-control__button_previous" onClick={handleClickPrevioustYear}>&#9668;</button>
-            <div className="date-control__setDate">           
+            <button
+              className="date-control__button_previous"
+              onClick={handleClickPrevioustYear}
+            >
+              &#9668;
+            </button>
+            <div className="date-control__setDate">
               <span className="setedYear">{date}</span>
             </div>
-            <button className="date-control__button_next" onClick={handleClickNextYear}>&#9658;</button>            
+            <button
+              className="date-control__button_next"
+              onClick={handleClickNextYear}
+            >
+              &#9658;
+            </button>
           </div>
-          <button className="date-control__button_today"onClick={()=>setDate(year)}>Текущий год</button>
+          <button
+            className="date-control__button_today"
+            onClick={() => setDate(year)}
+          >
+            Текущий год
+          </button>
         </div>
       </div>
     </div>
