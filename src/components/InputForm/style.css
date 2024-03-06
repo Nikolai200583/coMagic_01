@@ -205,7 +205,23 @@ input[type="submit"] {
   border-radius: 50%;
 }
 
+.content__date-control {
+  display: flex;
+  gap:10px
+}
 
+.date-control__button_next { 
+  width: 30px;
+  height: 30px;  
+}
 
-
-
+.date-control__setDate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date-control__button_today{
+  border: none;
+  border-bottom: 1px solid black;
+  cursor:pointer
+}

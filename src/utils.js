@@ -14,3 +14,12 @@ export const createDate = (params) => {
     monthNumber, 
   };
 };
+
+export function getColor() {
+  const colorElements = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 8; i++) {
+    color += colorElements[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
