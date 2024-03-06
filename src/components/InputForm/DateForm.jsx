@@ -21,10 +21,10 @@ export function DateForm({ input }) {
     <div className="container">
       <div className="drop">
         <div className="content">
-          <h1>
-            Hello
+          <h1 style={{marginBottom: 0}}>
+            Comment from
             <br />
-            {input.name} {input.lastName}
+            {input.name}: {input.textArea}
           </h1>
           <div className="content__date-control">
             <button

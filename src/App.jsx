@@ -7,7 +7,7 @@ import "./global.css";
 function App() {
   const [input, setInput] = useState({
     name: "",
-    lastName: ""
+    textArea: ""
   });
   function handleChangeInput(target) {
     setInput({ ...input, [target.name]: target.value });

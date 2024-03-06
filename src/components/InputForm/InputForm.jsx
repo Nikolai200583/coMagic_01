@@ -12,7 +12,7 @@ export function InputForm({ input, handleChangeInput }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    !input.name || !input.lastName
+    !input.name || !input.textArea
       ? alert("Все поля должны быть заполнены корректно")
       : navigate("/calendar");
   }
@@ -25,20 +25,20 @@ export function InputForm({ input, handleChangeInput }) {
             <div className="inputbox">
               <input
                 type="text"
+                maxLength="20"
                 name="name"
-                value={input.name}
-                className="inputname"
+                value={input.name}               
                 placeholder="User name"
                 onChange={(e) => handleChangeInput(e.target)}
               />
             </div>
             <div className="inputbox">
-              <input
-                type="text"
-                name="lastName"
-                value={input.lastName}
-                className="inputpass"
-                placeholder="Last name"
+              <textarea                
+                name="textArea"
+                maxLength="20"
+                rows="1"
+                value={input.textArea}   
+                placeholder="Comment"                       
                 onChange={(e) => handleChangeInput(e.target)}
               />
             </div>
@@ -49,8 +49,8 @@ export function InputForm({ input, handleChangeInput }) {
         </div>
       </div>
       {!input.name && <div className="btns">Enter name, please!</div>}
-      {!input.lastName && (
-        <div className="btns signup">Enter last name, please!</div>
+      {!input.textArea && (
+        <div className="btns signup">Enter comment, please!</div>
       )}
     </div>
   );

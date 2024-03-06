@@ -94,13 +94,15 @@ form {
   border-radius: 5px;
 }
 
-input {
+input, textarea {
   border: none;
   outline: none;
   background: transparent;
   width: 100%;
   font-size: 1em;
   padding: 10px 15px;
+  resize: none;
+  overflow: hidden;
 }
 
 input[type="submit"] {
