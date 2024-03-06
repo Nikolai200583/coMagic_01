@@ -25,7 +25,7 @@ export function InputForm({ input, handleChangeInput }) {
             <div className="inputbox">
               <input
                 type="text"
-                maxLength="20"
+                maxLength="18"
                 name="name"
                 value={input.name}               
                 placeholder="User name"
